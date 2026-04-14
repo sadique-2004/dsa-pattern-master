@@ -70,7 +70,7 @@ const Navbar = () => {
       <div className="container mx-auto px-5 py-3 flex items-center justify-between">
 
         {/* LEFT — Logo */}
-        <Link to="/" className="flex items-center group">
+        <Link to="https://offerunlocked.online" className="flex items-center group">
           <motion.div
             whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.96 }}

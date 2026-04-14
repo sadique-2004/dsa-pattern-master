@@ -7,22 +7,22 @@ const socials = [
   {
     icon: FaDiscord,
     label: "Discord",
-    url: "https://discord.gg/offerunlocked",
+    url: "https://www.linkedin.com/company/offerunlocked/",
   },
   {
     icon: FaLinkedin,
     label: "LinkedIn",
-    url: "https://linkedin.com/company/offer-unlocked",
+    url: "https://www.linkedin.com/company/offerunlocked/",
   },
   {
     icon: FaInstagram,
     label: "Instagram",
-    url: "https://instagram.com/offer_unlocked",
+    url: "https://www.linkedin.com/company/offerunlocked/",
   },
   {
     icon: FaYoutube,
     label: "YouTube",
-    url: "https://youtube.com/@offer_unlocked",
+    url: "https://www.linkedin.com/company/offerunlocked/",
   },
 ];
 
@@ -37,7 +37,7 @@ const Footer = () => {
 
           {/* Logo */}
           <img
-            src="/logo.png"
+            src="/favicon.png"
             alt="Offer Unlocked"
             className="mx-auto h-12 mb-6"
           />
@@ -76,17 +76,17 @@ const Footer = () => {
             </h3>
             <ul className="space-y-2 text-white/60 text-sm">
               <li>
-                <Link to="/" className="hover:text-white transition">
+                <Link to="https://offerunlocked.online/" className="hover:text-white transition">
                   Main Website
                 </Link>
               </li>
               <li>
-                <Link to="/dsa-sheet" className="hover:text-white transition">
+                <Link to="https://dsa.offerunlocked.online/" className="hover:text-white transition">
                   DSA Pattern Sheet
                 </Link>
               </li>
               <li>
-                <Link to="/cs-fundamentals" className="hover:text-white transition">
+                <Link to="https://core.offerunlocked.online/" className="hover:text-white transition">
                   CS Fundamentals
                 </Link>
               </li>
@@ -107,7 +107,7 @@ const Footer = () => {
 
               {/* Discord */}
               <a
-                href="https://discord.gg/offerunlocked"
+                href="https://discord.com/invite/wZDWtQXY5U"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-4 py-2 rounded-lg text-sm font-semibold bg-[#5865F2]/10 border border-[#5865F2]/40 text-[#a5abf8] hover:scale-105 transition"
@@ -117,7 +117,7 @@ const Footer = () => {
 
               {/* LinkedIn */}
               <a
-                href="https://linkedin.com/company/offer-unlocked"
+                href="https://www.linkedin.com/company/offerunlocked/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-4 py-2 rounded-lg text-sm font-semibold bg-[#0A66C2]/10 border border-[#0A66C2]/40 text-[#6aa9ff] hover:scale-105 transition"
@@ -130,7 +130,7 @@ const Footer = () => {
         </div>
 
         {/* ───── SOCIALS ───── */}
-        <div className="flex justify-center gap-6 mb-10 flex-wrap">
+        {/* <div className="flex justify-center gap-6 mb-10 flex-wrap">
           {socials.map((s, i) => (
             <a
               key={i}
@@ -142,7 +142,7 @@ const Footer = () => {
               <s.icon size={18} />
             </a>
           ))}
-        </div>
+        </div> */}
 
         {/* ───── BOTTOM ───── */}
         <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center text-xs text-white/50">
