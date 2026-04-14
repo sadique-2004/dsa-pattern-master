@@ -1,224 +1,157 @@
-// import { motion } from 'framer-motion';
-// import { FaLinkedin, FaInstagram, FaGithub, FaYoutube } from 'react-icons/fa';
-// import { Heart } from 'lucide-react';
-
-// const socialLinks = [
-//   {
-//     name: 'LinkedIn',
-//     icon: FaLinkedin,
-//     url: 'https://linkedin.com/in/sadiquemd',
-//     hoverColor: 'hover:text-[#0A66C2]',
-//   },
-//   {
-//     name: 'Instagram',
-//     icon: FaInstagram,
-//     url: 'https://instagram.com/life_indebug_mode',
-//     hoverColor: 'hover:text-[#E4405F]',
-//   },
-//   {
-//     name: 'YouTube',
-//     icon: FaYoutube,
-//     url: 'https://youtube.com/@life_indebug_mode',
-//     hoverColor: 'hover:text-[#FF0000]',
-//   },
-// ];
-
-// const Footer = () => {
-//   return (
-//     <footer className="relative mt-auto border-t border-border bg-card/50">
-//       <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent pointer-events-none" />
-
-//       <div className="container relative mx-auto px-4 py-12">
-//         <div className="flex flex-col items-center gap-8">
-
-//           {/* Quote */}
-//           <motion.p
-//             initial={{ opacity: 0, y: 20 }}
-//             whileInView={{ opacity: 1, y: 0 }}
-//             viewport={{ once: true }}
-//             transition={{ duration: 0.5 }}
-//             className="text-center font-mono text-sm text-muted-foreground md:text-base"
-//           >
-//             "Consistency beats talent when talent doesn't practice."
-//           </motion.p>
-
-//                     <motion.p
-//             initial={{ opacity: 0, y: 20 }}
-//             whileInView={{ opacity: 1, y: 0 }}
-//             viewport={{ once: true }}
-//             transition={{ duration: 0.5 }}
-//             className="text-center font-mono text-sm text-muted-foreground md:text-base"
-//           >
-//             "DSA pattern sheet inspired by <b className='font-bold text-blue-500'>Padho with Pratyush</b>. Big thanks"
-//           </motion.p>
-          
-
-//           {/* Social Links */}
-//           <motion.div
-//             initial={{ opacity: 0, y: 20 }}
-//             whileInView={{ opacity: 1, y: 0 }}
-//             viewport={{ once: true }}
-//             transition={{ delay: 0.1, duration: 0.5 }}
-//             className="flex items-center gap-4"
-//           >
-//             {socialLinks.map((social, index) => (
-//               <motion.a
-//                 key={social.name}
-//                 href={social.url}
-//                 target="_blank"
-//                 rel="noopener noreferrer"
-//                 initial={{ opacity: 0, scale: 0 }}
-//                 whileInView={{ opacity: 1, scale: 1 }}
-//                 viewport={{ once: true }}
-//                 transition={{ delay: 0.2 + index * 0.1, type: 'spring', stiffness: 200 }}
-//                 whileHover={{ y: -4, scale: 1.1 }}
-//                 whileTap={{ scale: 0.9 }}
-//                 className={`rounded-lg border border-border bg-card p-3 text-muted-foreground transition-colors ${social.hoverColor}`}
-//                 aria-label={social.name}
-//               >
-//                 <social.icon className="h-5 w-5" />
-//               </motion.a>
-//             ))}
-//           </motion.div>
-
-//           {/* Built by + Image */}
-//           <motion.div
-//             initial={{ opacity: 0, y: 20 }}
-//             whileInView={{ opacity: 1, y: 0 }}
-//             viewport={{ once: true }}
-//             transition={{ delay: 0.3, duration: 0.5 }}
-//             className="flex items-center gap-3 text-sm text-muted-foreground"
-//           >
-//             {/* Profile Image */}
-//             <motion.img
-//               src="https://www.sadiquedev.xyz/static/media/profileImg.a9385fbf86fe196e8bf5.jpg"
-//               alt="MD Sadique"
-//               className="h-10 w-10 rounded-full object-cover border border-border grayscale hover:grayscale-0 transition"
-//               animate={{ y: [0, -4, 0] }}
-//               transition={{ repeat: Infinity, duration: 4, ease: 'easeInOut' }}
-//             />
-
-//             <span>Built with</span>
-
-//             <motion.span
-//               animate={{ scale: [1, 1.2, 1] }}
-//               transition={{ repeat: Infinity, duration: 1.5 }}
-//             >
-//               <Heart className="h-4 w-4 fill-destructive text-destructive" />
-//             </motion.span>
-
-//             <span>by</span>
-//             <span className="font-semibold text-foreground">Mohammad Sadique</span>
-//           </motion.div>
-
-//           {/* Copyright */}
-//           <motion.p
-//             initial={{ opacity: 0 }}
-//             whileInView={{ opacity: 1 }}
-//             viewport={{ once: true }}
-//             transition={{ delay: 0.4, duration: 0.5 }}
-//             className="text-xs text-muted-foreground"
-//           >
-//             © {new Date().getFullYear()} life_indebug_mode. All rights reserved.
-//           </motion.p>
-//         </div>
-//       </div>
-//     </footer>
-//   );
-// };
-
-// export default Footer;
-
-
 import { motion } from "framer-motion";
-import { FaLinkedin, FaInstagram, FaYoutube } from "react-icons/fa";
-import { Heart } from "lucide-react";
+import { Link } from "react-router-dom";
+import { FaDiscord, FaLinkedin, FaInstagram, FaYoutube } from "react-icons/fa";
 
+/* Socials */
 const socials = [
-  { icon: FaLinkedin, url: "https://linkedin.com/in/sadiquemd", hover: "hover:text-[#0A66C2]" },
-  { icon: FaInstagram, url: "https://instagram.com/life_indebug_mode", hover: "hover:text-[#E4405F]" },
-  { icon: FaYoutube, url: "https://youtube.com/@life_indebug_mode", hover: "hover:text-[#FF0000]" },
+  {
+    icon: FaDiscord,
+    label: "Discord",
+    url: "https://discord.gg/offerunlocked",
+  },
+  {
+    icon: FaLinkedin,
+    label: "LinkedIn",
+    url: "https://linkedin.com/company/offer-unlocked",
+  },
+  {
+    icon: FaInstagram,
+    label: "Instagram",
+    url: "https://instagram.com/offer_unlocked",
+  },
+  {
+    icon: FaYoutube,
+    label: "YouTube",
+    url: "https://youtube.com/@offer_unlocked",
+  },
 ];
 
 const Footer = () => {
   return (
-    <footer className="border-t border-border bg-background">
-      <div className="container mx-auto px-6 py-10">
+    <footer className="relative bg-[#07070f] border-t border-[#10746C]/20 mt-20">
 
-        {/* QUOTE (HERO LINE) */}
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-8 text-center text-xl font-bold tracking-tight text-foreground md:text-2xl"
-        >
-          Consistency beats talent when talent doesn’t practice.
-        </motion.p>
+      <div className="max-w-6xl mx-auto px-6 py-16">
 
-        {/* MAIN CONTENT */}
-        <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-2">
+        {/* ───── LOGO + QUOTE ───── */}
+        <div className="text-center mb-16">
 
-          {/* LEFT — YOU */}
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="flex flex-col items-center gap-3 text-center text-sm text-muted-foreground"
-          >
-            {/* Socials */}
-            <div className="flex gap-3">
-              {socials.map((s, i) => (
-                <motion.a
-                  key={i}
-                  href={s.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ y: -4, scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                  className={`rounded-md border border-border bg-card p-2 transition ${s.hover}`}
-                >
-                  <s.icon className="h-4 w-4" />
-                </motion.a>
-              ))}
-            </div>
+          {/* Logo */}
+          <img
+            src="/logo.png"
+            alt="Offer Unlocked"
+            className="mx-auto h-12 mb-6"
+          />
 
-            {/* Built by */}
-            <div className="flex items-center gap-1">
-              <span>Built with</span>
-              <Heart className="h-3 w-3 fill-destructive text-destructive" />
-              <span>by</span>
-              <span className="font-medium text-foreground">
-                Mohammad Sadique
-              </span>
-            </div>
-          </motion.div>
+          {/* Quote */}
+          <blockquote className="text-xl md:text-2xl font-bold text-white leading-relaxed max-w-2xl mx-auto">
+            “Consistency beats talent when talent doesn’t practice.”
+          </blockquote>
 
-          {/* RIGHT — INSPIRATION */}
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="flex flex-col items-center gap-2 text-center text-sm text-muted-foreground"
-          >
-            <span className="uppercase tracking-wider text-xs">
-              Inspiration
-            </span>
-
-            <span className="font-medium text-foreground">
-              Padho with Pratyush
-            </span>
-
-            <span className="max-w-xs">
-              DSA Pattern Sheet inspired by his teaching.
-            </span>
-          </motion.div>
-
+          <p className="mt-4 text-white/60 text-sm">
+            Stay consistent. Crack interviews.
+          </p>
         </div>
 
-        {/* COPYRIGHT */}
-        <p className="mt-8 text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} life_indebug_mode. All rights reserved.
-        </p>
+        {/* ───── VALUE + CTA GRID ───── */}
+        <div className="grid md:grid-cols-3 gap-12 mb-16">
+
+          {/* WHAT WE OFFER */}
+          <div>
+            <h3 className="text-white font-semibold mb-4">
+              What You Get
+            </h3>
+            <ul className="space-y-2 text-white/60 text-sm leading-relaxed">
+              <li>• Pattern-wise DSA Sheet (180+ problems)</li>
+              <li>• Core CS Fundamentals</li>
+              <li>• Development Roadmaps</li>
+              <li>• Mock Interview Preparation</li>
+              <li>• Curated Resources & Guidance</li>
+            </ul>
+          </div>
+
+          {/* QUICK LINKS */}
+          <div>
+            <h3 className="text-white font-semibold mb-4">
+              Explore
+            </h3>
+            <ul className="space-y-2 text-white/60 text-sm">
+              <li>
+                <Link to="/" className="hover:text-white transition">
+                  Main Website
+                </Link>
+              </li>
+              <li>
+                <Link to="/dsa-sheet" className="hover:text-white transition">
+                  DSA Pattern Sheet
+                </Link>
+              </li>
+              <li>
+                <Link to="/cs-fundamentals" className="hover:text-white transition">
+                  CS Fundamentals
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* CTA */}
+          <div>
+            <h3 className="text-white font-semibold mb-4">
+              Join Community
+            </h3>
+
+            <p className="text-white/60 text-sm mb-4">
+              Learn, build, and grow with a community focused on cracking top tech roles.
+            </p>
+
+            <div className="flex gap-3 flex-wrap">
+
+              {/* Discord */}
+              <a
+                href="https://discord.gg/offerunlocked"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 rounded-lg text-sm font-semibold bg-[#5865F2]/10 border border-[#5865F2]/40 text-[#a5abf8] hover:scale-105 transition"
+              >
+                Join Discord
+              </a>
+
+              {/* LinkedIn */}
+              <a
+                href="https://linkedin.com/company/offer-unlocked"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 rounded-lg text-sm font-semibold bg-[#0A66C2]/10 border border-[#0A66C2]/40 text-[#6aa9ff] hover:scale-105 transition"
+              >
+                Follow LinkedIn
+              </a>
+
+            </div>
+          </div>
+        </div>
+
+        {/* ───── SOCIALS ───── */}
+        <div className="flex justify-center gap-6 mb-10 flex-wrap">
+          {socials.map((s, i) => (
+            <a
+              key={i}
+              href={s.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/50 hover:text-white transition text-sm"
+            >
+              <s.icon size={18} />
+            </a>
+          ))}
+        </div>
+
+        {/* ───── BOTTOM ───── */}
+        <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center text-xs text-white/50">
+          <p>© {new Date().getFullYear()} Offer Unlocked. All rights reserved.</p>
+          <p>
+            Built by <span className="text-white/80">Mohammad Sadique</span>
+          </p>
+        </div>
+
       </div>
     </footer>
   );
