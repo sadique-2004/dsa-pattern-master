@@ -26,7 +26,7 @@ const QuestionList = ({ pattern, onBack }: QuestionListProps) => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
-      className="py-8"
+      className="pb-8 pt-24"
     >
       <div className="container mx-auto px-4">
         {/* Header */}
@@ -48,7 +48,7 @@ const QuestionList = ({ pattern, onBack }: QuestionListProps) => {
           {/* Pattern Info */}
           <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <div className="flex items-center gap-4">
-              <span className="text-4xl">{pattern.icon}</span>
+              {/* <span className="text-4xl">{pattern.icon}</span> */}
               <div>
                 <h2 className="text-2xl font-bold text-foreground md:text-3xl">
                   {pattern.name}

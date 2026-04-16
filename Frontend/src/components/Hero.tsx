@@ -79,7 +79,7 @@ import { Code2, Sparkles } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative flex min-h-[calc(100vh-64px)] items-center overflow-hidden px-6 md:px-12 lg:px-20">
+   <section className="relative flex min-h-[calc(100vh-64px)] items-center overflow-hidden pt-40 md:pt-20 px-6 md:px-12 lg:px-20 mb-12">
 
       {/* Background Effects */}
       <div className="absolute inset-0 bg-grid opacity-30" />
@@ -157,7 +157,7 @@ const Hero = () => {
               transition={{ duration: 0.8 }}
               className="
                 relative 
-                w-[280px] md:w-[360px] lg:w-[440px]
+                w-[210px] md:w-[300px] lg:w-[300px]
                 object-contain
                 drop-shadow-[0_25px_60px_rgba(0,0,0,0.35)]
               "

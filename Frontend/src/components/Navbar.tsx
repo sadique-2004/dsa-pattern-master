@@ -85,7 +85,8 @@ export default function Navbar() {
         <motion.div
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: "auto" }}
-          className="md:hidden px-6 pb-4 space-y-4 bg-[#0a0a12]/90 backdrop-blur-xl border-t border-white/10"
+          className="md:hidden px-12 pb-4 space-y-4 bg-[#0a0a12]/90 backdrop-blur-xl border-t
+           border-white/10 "
         >
           
           <a
